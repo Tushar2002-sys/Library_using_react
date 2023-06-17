@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- Awesome Fonts -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Code Breaker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="bg.png">
+</head>
+<body>
+
+    <!-- Start Header -->
+    <header>
+        <nav>
+            <div class="logo">
+              <span color:"yellowgreen">DevRev  <br />
+              </span><span color:"yellowgreen">Open To Future</span></div>
+            <div class="open"><i class="fas fa-bars"></i></div>
+            <ul class="links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#collaborate" >about</a></li>
+                
+                <li><a href="#user" target="_blank">sign in/sign up</a></li>
+                <div class="close"><i class="fas fa-times"></i></div>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1> Library</h1>
+            <h1>Open To Future</h1> <br><br>
+            <h4> automated library management software that automates the various functions of a library, including cataloguing, circulation, user role management. </h4>
+        </div>
+    </header>
+
+
+    <!-- Start Services -->
+    <section class="services" id="collaborate">
+        <h1>Things that make us unique</h1>
+        <div class="container">
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.cg5cBl1WU7xWH5tp2TI16AHaEO?w=280&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                <div class="info">
+                    <h3>Group</h3>
+                    <p>We have created this section for collaboration of individual Guest which will lead to more idea projection for Library. </p>
+                    <a href="#" class="btn" target="_blank">Community</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.mwExZcheGY5v83aVTMZjYwHaE8?w=238&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                <div class="info">
+                    <h3>Help Us</h3>
+                    <p>Help us with your Valuable suggestion to make this environment more friendly and efficient.</p>
+                    <a href="#" class="btn" target="_blank">Mail</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.79NabYQZUwYKDEsQ92PwjAHaEK?w=322&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                <div class="info">
+                    <h3>Traditional Library</h3>
+                    <p>We Targeted to bypass the restrictions encountered via old Traditional Library </p>
+                    <a href="#" class="btn" target="_blank">Funding</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Trainers -->
+
+    <section class="pricing_table" id="user">
+        <h1>Profiles</h1>
+        <div class="pricing_card">
+            
+            <div class="pricing_box">
+                <h2></h2>
+
+                <ul>
+                  <li><i class="fas fa-check"></i>Access Your Collection </li>
+                  <li><i class="fas fa-check"></i>Virtually </li>
+                  <li><i class="fas fa-check"></i>From Anywhere</li>
+
+                </ul>
+                <button class="btn "><a href="login.html">Login</a></button>
+                <button class="btn "><a href="register.html">Sign In</a></button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Start Footer -->
+    <footer>
+        created by &copy; Tushar  Singh 20bcs9836 
+    </footer>
+
+
+    <!-- Javascript Section -->
+    <script>
+        var mainMenu = document.querySelector('.links')
+        var openMenu = document.querySelector('.open')
+        var closeMenu = document.querySelector('.close')
+
+        openMenu.addEventListener('click', show)
+        closeMenu.addEventListener('click', close)
+
+        function show(){
+            mainMenu.style.display = 'flex'
+            mainMenu.style.right = '0'
+        }
+        function close(){
+            mainMenu.style.right = '-60%'
+        }
+    </script>
+</body>
+</html>

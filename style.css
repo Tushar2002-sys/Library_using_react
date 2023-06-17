@@ -1,0 +1,446 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    outline: none;
+}
+*::selection{
+    background-color: #00cc90;
+    color: #fff;
+}
+body{
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+
+/* Start Header */
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://media.istockphoto.com/id/1166419449/vector/laptop-and-book-low-poly-vector-illustration.jpg?s=612x612&w=0&k=20&c=dIYnHoAKhXljO-p08PS149fkBezQUa_Rkt5nbBQ7AVE=');
+    color: rgb(175, 18, 18);
+    background-size: cover;
+    background-position: center;
+   
+    clip-path: polygon(100% 0, 100% 100%, 49% 100%, 0 100%, 0 0);
+}
+nav{
+    padding: 1% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+nav .logo{
+    font-size: 3rem;
+    cursor: pointer;
+}
+nav .logo span{
+    color: #fff;
+}
+nav .links{
+    padding-left: 0;
+}
+nav .links li{
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+nav .links li a{
+    color: #fff;
+}
+.links .active{
+    color: #00cc90;
+}
+nav .links li a:hover{
+    color: #00cc90;
+}
+header .content{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+header .content h1{
+    font-size: 3.5rem;
+    text-transform: ;
+    color: #fff;
+
+}
+header .content h4{
+  color: yellow;
+}
+.btn{
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    border: 0.3rem solid #00cc90;
+    color: #00cc90;
+    margin-top: 1.8rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+}
+.btn:hover{
+    background-color: #00cc90;
+    color: #fff;
+}
+nav .open,.close{
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #00cc90;
+    display: none;
+}
+@media (max-width:850px) {
+    nav .links{
+        height: 25rem;
+        width: 60%;
+        position: fixed;
+        top: 0;
+        right:0;
+        border-radius: 1.2rem;
+        background-color: #fff;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 9999;
+    }
+    nav .links li{
+        font-size: 1.8rem;
+        margin: 0.5rem;
+    }
+    nav .links li a{
+        color: #fff;
+    }
+    nav .open,nav .links .close{
+        display: block;
+        position: absolute;
+        top: 1.8rem;
+        right: 1.8rem;
+    }
+    header .content h1{
+        font-size: 6rem;
+    }
+}
+
+
+
+/* Start About */
+.about .row{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2% 6%;
+}
+.about .row .image{
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+.about .row .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about .row .content{
+    flex: 1 1 40rem;
+    padding: 2rem;
+    text-align: center;
+}
+.about .row .content h1{
+    font-size: 3rem;
+    color: #00cc90;
+    margin-bottom: 5rem;
+}
+.about .row .content p{
+    line-height: 1.7;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+
+
+/* Start Services */
+.services{
+    background-image: url('data:image/jpeg;base64,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');
+    min-height: 100vh;
+    text-align: center;
+    padding: 2% 6%;
+    background-size: cover;
+}
+.services h1{
+    font-size: 3.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: #fff;
+    border-bottom: .3rem solid #042353;
+    margin-bottom: 1.8rem;
+}
+.services .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.services .container .box{
+    width: 25rem;
+    height: 25rem;
+    margin: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+.services .container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.services .container .box .info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: bottom;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.services .container .box:hover .info{
+    transform: translate(-50%, -50%) scale(1);
+}
+.services .container .box .info h3{
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+.services .container .box .info p{
+    line-height: 2;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    margin-bottom: 1.2rem;
+}
+
+
+
+/* Start Trainers */
+.trainers{
+    background-image: url('https://img.freepik.com/premium-vector/online-education-book-computer-screen-line-connection-low-poly-wireframe-design-abstract-geometric-background-vector-illustration_42421-1150.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    text-align: center;
+    padding: 2% 6%;
+}
+.trainers h1{
+    font-size: 3.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: #fff;
+    border-bottom: .3rem solid #fff;
+    margin-bottom: 1.8rem;
+}
+.trainers p{
+    font-size: 1.5rem;
+    color: #333;
+}
+.trainers .items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.trainers .items .item{
+    height: 40rem;
+    width: 24rem;
+    margin: 5rem 1rem;
+}
+.trainers .item img{
+    width: 100%;
+    height: 100%;
+    border-radius: .6rem;
+    object-fit: cover;
+}
+.trainers .item .inner{
+    position: relative;
+    z-index: 9999;
+    padding: 0 1rem;
+}
+.trainers .item:hover{
+    transform: translateY(-20px);
+}
+.trainers .item .inner .info{
+    background-color: #fff;
+    padding: 1.2rem 1rem;
+    border-radius: 0.6rem;
+    margin-top: -2.5rem;
+}
+.trainers .item:hover .info{
+    transform: translateY(-30px);
+}
+.trainers .item .inner .info h4{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    color: #000;
+}
+.trainers .item .inner .info p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #333;
+    margin-top: .6rem;
+}
+.trainers .item .inner .info .links{
+    margin-top: 1rem;
+}
+.trainers .item .inner .info .links a{
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #00cc90;
+    text-align: center;
+    line-height: 2rem;
+    margin-left: 0.3rem;
+    font-size: 1.1rem;
+}
+.trainers .item .inner .info .links a:hover{
+    box-shadow: 0 0 .6rem #000;
+}
+/* Start Plan */
+.pricing_table{
+    min-height: 100vh;
+    padding: 2% 6%;
+    text-align: center;
+}
+.pricing_table h1{
+    font-size: 3.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: #042353;
+    border-bottom: .3rem solid #042353;
+    margin-bottom: 2.2rem;
+}
+.pricing_table .pricing_card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.pricing_card .pricing_box{
+    width: 30rem;
+    box-shadow: 2px 2px 6px #000;
+    margin-bottom: 4rem;
+}
+.pricing_card .pricing_box:hover{
+    transform: translateY(-30px);
+}
+.pricing_box h2{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    background-color: #00cc90;
+    padding: 1.2rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.pricing_box h3{
+    margin-top: 2rem;
+    font-size: 4rem;
+    color: #00cc90;
+}
+.pricing_box h3 sup{
+    font-size: 2rem;
+}
+.pricing_box h3 span{
+    font-size: 2.5rem;
+}
+.pricing_box p{
+    font-size: 2.5rem;
+    color: #333;
+}
+.pricing_box ul{
+    padding: 2rem;
+}
+.pricing_box ul li{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+.pricing_box .btn{
+    margin-bottom: 2rem;
+}
+
+
+
+/* Start Register */
+.register{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url('https://img.freepik.com/premium-vector/online-education-book-computer-screen-line-connection-low-poly-wireframe-design-abstract-geometric-background-vector-illustration_42421-1150.jpg');
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.register h1{
+    font-size: 3.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: #00cc90;
+    border-bottom: .3rem solid #00cc90;
+    margin-bottom: 2.2rem;
+}
+.register form{
+    padding: 2% 6%;
+    margin: 0 auto;
+}
+.register form .input_box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.register form .input_box input,textarea{
+    height: 4rem;
+    width: 49%;
+    background-color: transparent;
+    color: #ddd;
+    padding: 3rem 1rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    border: 1px solid #ddd;
+}
+.register form textarea{
+    height: 20rem;
+    width: 100%;
+    resize: none;
+    padding: 1rem;
+}
+@media (max-width:1100px) {
+    .register form .input_box input{
+        width: 100%;
+    }
+}
+
+
+
+/* Start Footer */
+footer{
+    background-image:url('https://img.freepik.com/premium-vector/online-education-book-computer-screen-line-connection-low-poly-wireframe-design-abstract-geometric-background-vector-illustration_42421-1150.jpg');
+    color: #fff;
+    padding: 4rem;
+    text-align: center;
+    background-color: #333;
+    font-size: 1.8rem;
+}

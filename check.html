@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Tab</title>
+  <style>
+    /* CSS code for the animation */
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* CSS code for the search results */
+    #search-results {
+      animation: fade-in 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="text" id="search-input" placeholder="Search...">
+    <button id="search-button">Search</button>
+  </div>
+
+  <div id="search-results">
+    <!-- Search results will be displayed here -->
+  </div>
+
+  <!-- Add JavaScript code to handle the search functionality -->
+  <script>
+    document.getElementById("search-button").addEventListener("click", function() {
+      var searchQuery = document.getElementById("search-input").value;
+      // Perform the search logic here using the searchQuery
+
+      // Display the search results in the "search-results" div
+      var searchResults = document.getElementById("search-results");
+      searchResults.innerHTML = "Search results for: " + searchQuery;
+
+      // Apply animation to the search results
+      searchResults.style.animation = "fade-in 1s ease-in-out";
+    });
+  </script>
+</body>
+</html>
